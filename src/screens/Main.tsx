@@ -4,7 +4,6 @@ import Button from '../components/Button';
 import { NavigationProp } from '@react-navigation/native';
 
 const Main = ({navigation}) => {
-  console.log(navigation);
   return (
     <View style={styles.mainConatianer}>
       <Button
@@ -16,8 +15,8 @@ const Main = ({navigation}) => {
         title={'Profile'}
       />
        <Button
-        onPress={() => navigation.push('SquarCircle')}
-        title={'SquarCircle'}
+        onPress={() => navigation.push('OnBoarding')}
+        title={'OnBoarding'}
       />
     </View>
   );
