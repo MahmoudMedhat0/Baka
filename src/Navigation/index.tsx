@@ -16,7 +16,7 @@ const Navigation = () => {
       <Stack.Navigator
         initialRouteName="Main"
         screenOptions={{
-          headerShown: true,
+          headerShown: false,
         }}>
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="Profile" component={Profile} />

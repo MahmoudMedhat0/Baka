@@ -1,12 +1,20 @@
 import React from 'react'
-import { Text, View } from 'react-native'
-
+import { StyleSheet, Text, View } from 'react-native'
+import BottomSheet from '../components/BottomSheet'
 function Profile() {
   return (
-   <View>
-    <Text>hhhhhhh</Text>
+   <View style={styles.conainer}>
+   <BottomSheet />
    </View>
   )
 }
+const styles = StyleSheet.create({
+    conainer:{
+        flex:1,
+        backgroundColor:'#111',
+        alignItems:'center',
+        justifyContent:'center'
+    }
+})
 
 export default Profile
