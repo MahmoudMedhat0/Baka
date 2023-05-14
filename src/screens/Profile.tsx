@@ -1,10 +1,23 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import BottomSheet from '../components/BottomSheet'
+import React, { useCallback, useRef } from 'react'
+import { StyleSheet, View } from 'react-native'
+import BottomSheet, { BottomSheetRefProps } from '../components/BottomSheet'
+import Button from '../components/Button';
 function Profile() {
+
+  const ref = useRef<BottomSheetRefProps>(null);
+  const onPress = useCallback(() => {
+    const isActive = ref?.current?.isActive();
+    if (isActive) {
+      ref?.current?.scrollTo(0);
+    } else {
+      ref?.current?.scrollTo(-350);
+    }
+  }, []);
+
   return (
    <View style={styles.conainer}>
-   <BottomSheet />
+    <Button title='show modal' onPress = {onPress} />
+   <BottomSheet ref = {ref} />
    </View>
   )
 }

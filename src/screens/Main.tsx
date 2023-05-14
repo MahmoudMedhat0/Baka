@@ -1,7 +1,6 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import React from 'react';
 import Button from '../components/Button';
-import { NavigationProp } from '@react-navigation/native';
 
 const Main = ({navigation}) => {
   return (
@@ -12,11 +11,15 @@ const Main = ({navigation}) => {
       />
        <Button
         onPress={() => navigation.push('Profile')}
-        title={'Profile'}
+        title={'Bottom Sheet'}
       />
        <Button
         onPress={() => navigation.push('OnBoarding')}
         title={'OnBoarding'}
+      />
+       <Button
+        onPress={() => navigation.push('ColorPicker')}
+        title={'Color Picker'}
       />
     </View>
   );

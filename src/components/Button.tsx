@@ -8,11 +8,11 @@ function Button({ title, onPress, style }: {
 
 }) {
   return (
-    <View style={[styles.buttonContainer, style]}>
       <TouchableWithoutFeedback onPress={onPress}>
+    <View style={[styles.buttonContainer, style]}>
         <Text style={styles.textStyle}>{title}</Text>
-      </TouchableWithoutFeedback>
     </View>
+      </TouchableWithoutFeedback>
   );
 }
 
