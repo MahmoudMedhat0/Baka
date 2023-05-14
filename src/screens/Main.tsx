@@ -21,6 +21,10 @@ const Main = ({navigation}) => {
         onPress={() => navigation.push('ColorPicker')}
         title={'Color Picker'}
       />
+       <Button
+        onPress={() => navigation.push('ThemeColor')}
+        title={'Theme Color'}
+      />
     </View>
   );
 };

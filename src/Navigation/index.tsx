@@ -6,7 +6,7 @@ import {
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
 
-import { Main, Profile, SquarCircle, OnBoarding, ColorPickerScreen } from '../screens';
+import { Main, Profile, SquarCircle, OnBoarding, ColorPickerScreen, ThemeColor } from '../screens';
 
 const Stack = createNativeStackNavigator<StackParamList>();
 
@@ -23,6 +23,8 @@ const Navigation = () => {
         <Stack.Screen name="SquarCircle" component={SquarCircle} />
         <Stack.Screen name="OnBoarding" component={OnBoarding} />
         <Stack.Screen name="ColorPicker" component={ColorPickerScreen} />
+        <Stack.Screen name="ThemeColor" component={ThemeColor} />
+
 
         
 
@@ -40,6 +42,7 @@ export type StackParamList = {
   SquarCircle: undefined;
   OnBoarding: undefined;
   ColorPicker: undefined;
+  ThemeColor: undefined;
 };
 
 export type StackScreenProps<T extends keyof StackParamList> =
