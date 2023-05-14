@@ -1,8 +1,11 @@
 import React, { useCallback, useRef } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { Dimensions, Image, ImageBackground, StyleSheet, View } from 'react-native'
 import {Button, BottomSheet, BottomSheetRefProps} from '../components';
-function Profile() {
 
+const { width: SIZE, height } = Dimensions.get('window');
+
+
+function Profile() {
   const ref = useRef<BottomSheetRefProps>(null);
   const onPress = useCallback(() => {
     const isActive = ref?.current?.isActive();
@@ -15,8 +18,13 @@ function Profile() {
 
   return (
    <View style={styles.conainer}>
-    <Button title='show modal' onPress = {onPress} />
+     <ImageBackground
+              source={Image.resolveAssetSource(require('../assets/images/neom.jpg'))}
+              style={styles.bgImage}
+            >
+    <Button title='tap' onPress = {onPress} style={styles.btn} />
    <BottomSheet ref = {ref} />
+   </ImageBackground>
    </View>
   )
 }
@@ -26,6 +34,19 @@ const styles = StyleSheet.create({
         backgroundColor:'#111',
         alignItems:'center',
         justifyContent:'center'
+    },
+    bgImage: {
+      width: SIZE,
+      height: height,
+      alignItems:'center',
+    },
+    btn:{
+      shadowOffset: { width: 0, height: 20 },
+      shadowOpacity: 1,
+      shadowRadius: 35,
+      elevation: 8,
+      marginTop:100,
+
     }
 })
 

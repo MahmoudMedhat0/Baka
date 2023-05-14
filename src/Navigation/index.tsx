@@ -6,7 +6,7 @@ import {
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
 
-import { Main, Profile, SquarCircle, OnBoarding, ColorPickerScreen, ThemeColor } from '../screens';
+import { Main, Profile, SquarCircle, OnBoarding, ColorPickerScreen, ThemeColor, DoubleTabEffect } from '../screens';
 
 const Stack = createNativeStackNavigator<StackParamList>();
 
@@ -24,6 +24,7 @@ const Navigation = () => {
         <Stack.Screen name="OnBoarding" component={OnBoarding} />
         <Stack.Screen name="ColorPicker" component={ColorPickerScreen} />
         <Stack.Screen name="ThemeColor" component={ThemeColor} />
+        <Stack.Screen name="DoubleTabEffect" component={DoubleTabEffect} />
 
 
         
@@ -43,6 +44,7 @@ export type StackParamList = {
   OnBoarding: undefined;
   ColorPicker: undefined;
   ThemeColor: undefined;
+  DoubleTabEffect: undefined;
 };
 
 export type StackScreenProps<T extends keyof StackParamList> =

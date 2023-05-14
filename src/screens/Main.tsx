@@ -25,6 +25,10 @@ const Main = ({navigation}) => {
         onPress={() => navigation.push('ThemeColor')}
         title={'Theme Color'}
       />
+      <Button
+        onPress={() => navigation.push('DoubleTabEffect')}
+        title={'Double Tab effect'}
+      />
     </View>
   );
 };
