@@ -1,7 +1,6 @@
 import React, { useCallback, useRef } from 'react'
 import { StyleSheet, View } from 'react-native'
-import BottomSheet, { BottomSheetRefProps } from '../components/BottomSheet'
-import Button from '../components/Button';
+import {Button, BottomSheet, BottomSheetRefProps} from '../components';
 function Profile() {
 
   const ref = useRef<BottomSheetRefProps>(null);

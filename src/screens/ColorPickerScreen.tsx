@@ -1,6 +1,6 @@
 import { View, Dimensions, StyleSheet } from 'react-native'
 import React, { useCallback } from 'react'
-import {ColorPicker} from '../components/ColorPicker';
+import {ColorPicker} from '../components';
 import Animated, { useAnimatedStyle, useSharedValue } from 'react-native-reanimated';
 
 

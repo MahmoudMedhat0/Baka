@@ -146,4 +146,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export { ColorPicker };
+export default  ColorPicker ;

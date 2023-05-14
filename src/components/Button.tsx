@@ -1,18 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
 
-function Button({ title, onPress, style }: {
+interface ButtonProps{
   title: string,
-  onPress: () => {},
+  onPress: () => void,
   style?: object
+}
 
-}) {
+const Button: React.FC<ButtonProps> = ({ title, onPress, style }) => {
   return (
-      <TouchableWithoutFeedback onPress={onPress}>
-    <View style={[styles.buttonContainer, style]}>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={[styles.buttonContainer, style]}>
         <Text style={styles.textStyle}>{title}</Text>
-    </View>
-      </TouchableWithoutFeedback>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#1f2941',
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical:5
+    marginVertical: 5
   },
 });
 
