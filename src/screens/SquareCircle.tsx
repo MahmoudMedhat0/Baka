@@ -6,10 +6,10 @@ import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, 
 const SIZE = 100.0
 const CIRCLE_RADIAS = SIZE * 1.9
 
-type ContextType = {
-    translateX: number
-    translateY: number
-}
+// type ContextType = {
+//     translateX: number
+//     translateY: number
+// }
 
 function SquarCircle() {
     const translateX = useSharedValue(0);
